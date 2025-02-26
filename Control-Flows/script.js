@@ -73,9 +73,9 @@ threashold >= 40 ? console.log("marry") : console.log("You are still a minor");
 
 const number = 9;
 
-const result = number % 2 === 0 ? "even" : "odd";
+const results = number % 2 === 0 ? "even" : "odd";
 
-console.log(result)
+console.log(results)
 
 
 let temprature = 90;
@@ -294,3 +294,7 @@ while(i < fruitz.length){
     students.forEach((student, i) => { 
         console.log(`index ${i}: ${student}`)
     })
+
+
+
+    
