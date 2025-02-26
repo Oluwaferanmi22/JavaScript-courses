@@ -72,9 +72,9 @@ const trueValue = num1 || name1 ? "It is truthy value": "It is false"
 //comparison operator
 
 let num2 = 10;
-num2--
+num2++
 const num3 = 10;
 
 const result = num2 === num3 ? "yes": "no"
 
-console.log(--num2);
+console.log(++num2);

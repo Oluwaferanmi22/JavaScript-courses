@@ -168,16 +168,129 @@ switch(role){
 
 
 //loops are used to execute a block of code multiple times.
+
+
 for(let i = 0; i < 10; i++) {
     console.log(i)
 }
 
 let table = 5;
-for(let i = 1;i <= 10; i++)  {
-    console.log(`${table} * ${1} = ${table * i}`)
+for(let i = 1; i <= 10; i++)  {
+    console.log(`${table} * ${i} = ${table * i}`);
 }
-let i, x = '';
-for (i = 0; i <= 5; i++) {
-    x +=  i;
-console.log(x)
+
+// let i, x = '';
+// for (i = 0; i <= 5; i++) {
+//     x +=  i;
+// console.log(x)
+// }
+
+
+//Equality operator (strict)
+
+let nuMber1 =  [1, 2, 3];
+let nuMber2 =  [1, 2, 3];
+// console.log([1, 2, 3] === [1, 2, 3]);
+
+console.log(5 === "5");
+console.log(true === 1);
+console.log(null === undefined);
+// console.log({} === {})
+
+let obj1 = {name: "lateefa"};
+let obj2 = {name: "lateefa"};
+
+console.log(obj1 === obj2)
+
+
+
+//Equality operator (loss)
+
+let nuMbeR1 =  [1, 2, 3];
+let nuMberR2 = [1, 2, 3];
+console.log([1, 2, 3] == [1, 2, 3]);
+
+console.log(5 == "5");
+console.log(true == 1);
+console.log(null == undefined);
+console.log("j" == "g")
+
+let obJ1 = {name: "lateefa"};
+let obJ2 = {name: "lateefa"};
+console.log(typeof obJ1)
+console.log(typeof obj1 == obj2)
+
+
+//example
+for (let i = 1; i <= 10; i +=2){
+console.log("odd:", i);
 }
+
+for (let i = 1; i <= 2; i++){
+    console.log("result:", i);
+    }
+for (let i = 4; i <= 5; i++){
+    console.log("result:", i);
+    } 
+
+  
+        
+// let array1 =["Apple", "Banana", "Mango"];
+// for(let i = 1; i < array1.length; i++) { 
+//     console.log(array1[i]);
+// }
+let names = "ALABAFERANMI"
+for(let i =0; i < names.length; i++) {
+    console.log(names[i]);
+}
+
+
+//for...in loop
+
+//Example1
+let User ={Name:'Feranmi', Age:15, City:'ogun'};
+
+for(key in User) {
+console.log(key + "-", User[key])
+}
+let array =["Red","Orange", "Pink", "Yellow"]
+for(array of array){
+    console.log(array);
+}
+    
+//while loop
+
+// while (condition) {
+    //code to execute
+// }
+
+// Example 1
+// let k = 1;
+// while(k <=7){
+//     console.log(k)
+// }
+ 
+
+// let y = 0;
+// while(y < 5){
+//     y++;
+
+//     if(y === 3){
+//         continue;
+//     }
+//     console.log(y)
+// }
+
+
+let fruitz = ["Apple", "Banana", "Mango"];
+let i = 0;
+while(i < fruitz.length){
+    console.log(fruitz[i]);
+
+    i++}
+
+    //foreach
+    const students = ['abdullah', 'daisy', 'prime']
+    students.forEach((student, i) => { 
+        console.log(`index ${i}: ${student}`)
+    })
