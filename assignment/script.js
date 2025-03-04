@@ -23,11 +23,6 @@ for (let color of colors) {
     console.log(color);
 }
 
-//Question 4
-
-
-
-
 //Question 5
 let nums = "result";
 let result = nums > 0 ? "Positive" : nums === 0 ? "Zero" : "Negative";
@@ -42,3 +37,4 @@ let Result = (num % 3 === 0 && num % 5 === 0) ? "FizzBuzz" :
                 num;
 
 console.log(Result);
+ 
