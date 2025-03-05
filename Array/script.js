@@ -1,3 +1,4 @@
+const cl = console.log;
 const cohort = ["Idris","Lateefa","muiz","Abdul-kabeer","Ridwan","Damilare"]
 console.log(cohort);
 
@@ -19,8 +20,8 @@ cohort[6] = "Feranmi"
 console.log(cohort);
 
 
-cohort.forEach((names) => {
-    console.log(names.toLowerCase())
+cohort.forEach((name) => {
+    console.log(name.toUpperCase())
 })
 
 const student = ["Yemi","Soliu","Elizabeth", "Princess","Praise"]
@@ -40,7 +41,7 @@ const number = [3, 2, 1 , 4, 5,5]
 console.log(number);
 
 const poped = number.pop(); //to save the removed element in a variable
-console.log(poped); //to vieq the remove elemnt
+console.log(poped); //to view the remove elemnt
 console.log(number)
 
 //*******Shift() Mthod********* *
@@ -53,13 +54,14 @@ console.log(colors)
 console.log(remE1)
 
 
-const color = ["red","Black","whiite",]
-console.log(color)
+// const color = ["red","Black","whiite",]
+// console.log(color)
 
 
 //Unshift method 
 
-const remE = color.unshift ("purple"); 
+const remE = colors.unshift ("purple"); 
+console.log(colors)
 console.log(remE)
 
 const foods = ["Semo", "Amala", "Beans", "Eba", "Pounded yam"]
@@ -69,7 +71,7 @@ console.log(foods);
 //splice Method
 
 
-foods.splice(3,0, "Tuwo", "Yam")
+foods.splice(0,3, "Tuwo", "Yam")
 console.log(foods)
 
 
@@ -84,7 +86,7 @@ console.log(male)
 
 const newstring = "adeyemi"
 console.log(newstring.length);
-const slicestring = newstring.slice(1,4);
+const slicestring = newstring.slice(12,5);
 console.log(slicestring)
 
 const warriors = male.slice(1, 4);
@@ -157,3 +159,82 @@ console.log(prices)
 
 const commodities = investory.map((value) => value.namer)
 console.log(commodities)
+
+
+//Map method --> create a new array and apply function to each element without modifying the original array.
+const arrr =[1,2,3,4,5,6];
+const multiplyval = arrr.map((el) =>  el * 2);
+console.log(multiplyval);
+
+const words = ["hello","world","javascript"];
+console.log(words.map(words => words.toUpperCase()))
+
+const pricesinUSD = [200, 120, 360, 90];
+const xcangeRate = 1490;
+
+console.log(pricesinUSD.map ((usd) => usd * xcangeRate))
+
+const users = [
+    {name:"lateefah", age:300 },
+    {name:"abdullah", age:950 },
+    {name:"Muiz", age:1450 },
+    {name:"Abdul Kabeer", age:1950 },
+]
+const naMe = users.map((value) => {
+    return value.name
+})
+
+const product = [
+    {name:"Laptop", pricE:300 },
+    {name:"Desktop", pricE:950 },
+    {name:"Mouse", pricE:1450 },
+    {name:"Keyboard", pricE:1950 },
+];
+
+const producT = product.map((product, index) => ({
+id:index + 1,    
+...product
+}));
+
+console.log(producT)
+
+
+// const productWithId = value.map((value, index) => ({
+//     id: index +1
+// }))
+// console.log(productWithId)
+
+
+const nums = [1,2,3,4,5,6,7,8,9,10];
+const numEs = nums.map((i) => {
+    if(i < 6){
+        return i 
+    }
+})
+console.log(numEs)
+
+//filter
+let evennums = nums.filter((numbers) => numbers % 2 ===0)
+console.log(evennums)
+
+const below = product.filter((products) => 
+products.pricE <= 1000);
+console.log(below)
+
+const longproduct = product.filter((prod)  => {prod.name.length < 7});
+cl(longproduct)
+
+let newarr = [100,"Pelumi", false, {}, null, undefined]
+
+const filtered = newarr.filter((data) => typeof data === "string")
+console.log(filtered);
+
+
+
+let total = 0;
+const priced = [300, 950, 1450, 1950]
+priced.filter((plus) => {
+    cl((total += plus))
+})
+
+cl(total);
